@@ -9,7 +9,6 @@ class Solution:
             if nums[mid]<=nums[high]:
                 mini=min(mini,nums[mid])
                 high=mid-1
-                
             else:
                 mini=min(mini,nums[mid])
                 low=mid+1
