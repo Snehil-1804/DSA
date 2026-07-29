@@ -1,15 +1,12 @@
 class Solution:
     def getSecondLargest(self, arr):
-        # Code Here
-        n=len(arr)
+        # code here
         largest=-1
-        sec_largest=-1
-        for i in range(0,n):
+        second_largest=-1
+        for i in range(len(arr)):
             if arr[i]>largest:
-                sec_largest=largest
+                second_largest=largest
                 largest=arr[i]
-            elif arr[i]>sec_largest and arr[i]!=largest:
-                sec_largest=arr[i]
-            # elif arr[i]==sec_largest:
-            #     return -1
-        return sec_largest
+            elif arr[i]>second_largest and largest!=arr[i]:
+                second_largest=arr[i]
+        return second_largest
