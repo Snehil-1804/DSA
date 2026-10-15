@@ -37,9 +37,9 @@ Output: [[],[0]]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 1 ms (beats 9.98%)  
+**Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 19.3 MB (beats 92.61%)  
-**Submitted:** 2026-10-15T14:52:44.469Z  
+**Submitted:** 2026-10-15T14:59:51.071Z  
 
 ```py
 class Solution:
