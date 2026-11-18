@@ -1,22 +1,24 @@
-
 class Solution:
-    def solve(self, index, total, bracket, result, n):
-        if index == len(bracket):
-            if total == 0:
-                result.append("".join(bracket))
+    def solve(self,index,total,bracket,result):
+        if index>=len(bracket):
+            if total==0:
+                result.append(".".join(bracket))
             return
-
-        if total < 0 or total > n:
+        if total>len(bracket)//2:
             return
-
-        bracket[index] = "("
-        self.solve(index + 1, total + 1, bracket, result, n)
-
-        bracket[index] = ")"
-        self.solve(index + 1, total - 1, bracket, result, n)
+        elif total<0:
+            return
+        bracket[index]="("
+        sum=total+1
+        self.solve(index+1,sum,bracket,result)
+        bracket[index]=")"
+        sum=total-1
+        self.solve(index+1,total,bracket,result)
+        return result
 
     def generateParenthesis(self, n: int) -> list[str]:
-        bracket = [""] * (2 * n)
-        result = []
-        self.solve(0, 0, bracket, result, n)
-        return result
+        bracket=[""]*(n*2)
+        result=[]
+        self.solve(0,0,bracket,result)
+
+        
